@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript</title>
+</head>
+<style>
+	#clear {
+		  width:130px;
+	}
+	.formstyle {
+		width: 400px;
+    height: 500px;
+    margin: auto;
+    /* clip-path: polygon(0 0, 100% 0, 93% 100%, 6% 99%); */
+    clip-path: polygon(0 0, 100% 0, 89% 100%, 11% 99%);
+    border-radius: 50px;
+    /* border-bottom-left-radius: 37px; */
+    /* font-size: small; */
+    background-color: #1e185e;
+    border: 20px solid #4f5451;
+    box-shadow: 2px 2px #4f5451;
+    box-shadow: 0 0 10px black;
+		
+
+	}
+	#answerstyle {
+width: 338px;
+    height: 110px;
+    padding: 12px 20px;
+    margin-top: 10px;
+    text-align: right;
+    font-size: xxx-large;
+
+	}
+
+input {
+	  width:70px;
+	/*   border-radius: 50% 48% 88% 10% / 74% 35% 69% 10%; */
+	   background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1));
+
+}
+h3 {
+    color: antiquewhite;
+    text-shadow: 0px 0px 8px black;
+}
+
+#forminput
+  {
+  	text-align: center;
+
+}
+input#digit{
+    background-color: #9e9e9e;
+    color: blanchedalmond;
+    font-size: large;
+    border-radius: -8px;
+    clip-path: circle(50% at 50% 50%);
+    transition: 2s;
+}
+input#digit:hover{    background-color: #242422;}
+input#opr{
+    background-color: #9e9e9e;
+    color: blanchedalmond;
+    font-size: large;
+    border-radius: -8px;
+    clip-path: circle(50% at 50% 50%);
+    transition: 2s;
+    /* kl;dkfl;dskfdslkf// */
+  
+  /* box-shadow: 0px 0px 10px skyblue;
+  cursor: pointer;
+  font-style: italic;
+  color: #1e185e;
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px; */
+}
+input#opr:hover{     background-color: #242422; 
+}
+
+
+	</style>
+
+
+<body>
+
+<div class="formstyle " id="demo">
+	<form name="forms" id="forminput">
+		
+    <input type="text" name="answer" id ="answerstyle"><br><br>
+      
+<div class="digit ">
+
+    <input type="button"id="digit"value="1" onclick="forms.answer.value+='1'">
+    <input type="button"id="digit"value="2" onclick="forms.answer.value+='2'">
+    <input type="button"id="digit"value="3" onclick="forms.answer.value+='3'">
+    <br><br>
+    <input type="button"id="digit"value="4" onclick="forms.answer.value+='4'">
+    <input type="button" id="digit"  value="5" onclick="forms.answer.value+='5'">
+    <input type="button"id="digit"value="6" onclick="forms.answer.value+='6'">
+    <br><br>
+    <input type="button"id="digit"value="7" onclick="forms.answer.value+='7'">
+    <input type="button"id="digit"value="8" onclick="forms.answer.value+='8'">
+    <input type="button"id="digit"value="9" onclick="forms.answer.value+='9'">
+    <br><br>
+</div>
+<div class="opr ">
+
+
+    <input type="button"id="opr" value="+" onclick="forms.answer.value+='+'">
+    <input type="button"id="opr" value="-" onclick="forms.answer.value+='-'">
+    <input type="button"id="opr" value="*" onclick="forms.answer.value+='*'">
+    <br><br>
+    <input type="button"id="opr" value="/" onclick="forms.answer.value+='/'">
+    <input type="button"id="opr" value="0" onclick="forms.answer.value+='0'">
+
+    <input type="button"id="opr" value="=" onclick="forms.answer.value=eval(forms.answer.value)">
+    <br><br/>
+    <input type="button"id="opr" value="C" id="clear" onclick="forms.answer.value=''">
+    <input type="button"id="opr" value="<--"id="clear" onclick="back()" ><br><br>
+    <div>
+    	  <h3>&copy;  Developed by suraj kumar sharma</h3>
+	</form><br><br>
+	
+</div>
+
+	<script type="text/javascript">
+		function back() {
+			exp= forms.answer.value;
+			exp=exp.substring(0, exp.length-1);
+             forms.answer.value=exp;
+		}
+		
+	</script>
+
+</body>
+</html>
